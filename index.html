@@ -1,0 +1,156 @@
+<!-- Theme 2 – Portfolio
+In this theme, you have to create your own personal portfolio website that showcases your work, experience and overall development, something that you can use professionally in future.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/1f9a2afb73.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- This is the header which includes the navbar , navbar items , center content and
+       background image -->
+    <header>
+      <!-- navbar -->
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <!--  these are the item links used in the navbar -->
+          <input type="checkbox" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="navbar-items">
+            <li class="navbar-item"><a href="./index.html">Home</a></li>
+            <li class="navbar-item">
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li class="navbar-item"><a href="./resume.html">Resume</a></li>
+            <li class="navbar-item"><a href="./services.html">Services</a></li>
+            <li class="navbar-item"><a href="./about.html">About</a></li>
+            <li class="navbar-item"><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- this is the header content  -->
+      <div class="header-content">
+        <h2 class="header-h2">Hello, I'm</h2>
+        <h1 class="header-h1">Kaneez Fatima Sheikh</h1>
+        <p class="header-para">And This Is My Rezume</p>
+      </div>
+    </header>
+    <!-- This is a showcase section which includes the showcase content 
+      and showcase images  -->
+    <section class="showcase" id="portfolio">
+      <div class="container">
+        <!-- main heading -->
+        <h1>Portfolio</h1>
+        <!-- options -->
+        <div class="showcase-content">
+          <p>All</p>
+          <p>Mediums</p>
+          <p>Calligraphy</p>
+          <p>Sketching</p>
+          <p>Grafitti</p>
+        </div>
+        <!-- these are the top 3 boxes which includes images and text inside -->
+        <div class="showcase-imgs1">
+          <div class="img-text">
+            <img class="showcase-img" src="./images/mosque.jpeg" alt="mockup" />
+            <h1>Acrylic on canvas</h1>
+            <p>Acrylic on canvas</p>
+          </div>
+          <div class="img-text">
+            <img
+              class="showcase-img"
+              src="./images/Allah S.W.T.jpeg"
+              alt="mockup-1"
+            />
+            <h1>Acrylic on canvas</h1>
+            <p>Acrylic on canvas</p>
+          </div>
+          <div class="img-text">
+            <img
+              class="showcase-img"
+              src="./images/Embroidery.jpeg"
+              alt="mockup-2"
+            />
+            <h1>Acrylic on canvas</h1>
+            <p>Acrylic on canvas</p>
+          </div>
+        </div>
+        <!-- these are the lower 3 boxes which includes images and text inside -->
+        <div class="showcase-imgs2">
+          <div class="img-text">
+            <img class="showcase-img" src="./images/names.jpeg" alt="mockup" />
+            <h1>Acrylic on canvas</h1>
+            <p>Acrylic on canvas</p>
+          </div>
+          <div class="img-text">
+            <img
+              class="showcase-img"
+              src="./images/blue calli.jpeg"
+              alt="mockup-1"
+            />
+            <h1>Acrylic on canvas</h1>
+            <p>Acrylic on canvas</p>
+          </div>
+          <div class="img-text">
+            <img
+              class="showcase-img"
+              src="./images/black white.jpeg"
+              alt="mockup-2"
+            />
+            <h1>Acrylic on canvas</h1>
+            <p>Acrylic on canvas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- this is the footer -->
+    <footer>
+      <div class="container">
+        <div class="social-media-links">
+          <i class="fa-brands fa-square-facebook fa-4x text-light"></i>
+          <i class="fa-brands fa-square-instagram fa-4x text-light"></i>
+          <i class="fa-brands fa-square-youtube fa-4x text-light"></i>
+          <i class="fa-brands fa-square-twitter fa-4x text-light"></i>
+        </div>
+
+        <p class="text-light">
+          Copyright &copy; 2023, all rights reserved / This is my Portfolio
+        </p>
+      </div>
+    </footer>
+    <!-- for smooth scrolling  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
